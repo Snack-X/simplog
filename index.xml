@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin version="2.0">
+    <information>
+        <name>Simplog</name>
+        <version>1.0.0</version>
+        <description>
+            <![CDATA[Simple Blog for Textcube]]>
+        </description>
+        <license>
+            <![CDATA[MIT]]>
+        </license>
+    </information>
+    <author>
+        <name>Snack</name>
+        <homepage>http://korsnack.kr</homepage>
+        <email>korsnack@korsnack.kr</email>
+    </author> 
+    <support mobile="yes" desktop="yes" tablet="yes" />
+    <default>
+        <recentEntries>5</recentEntries>
+        <recentComments>5</recentComments>
+        <recentTrackbacks>5</recentTrackbacks>
+        <itemsOnGuestbook>6</itemsOnGuestbook>
+        <tagsInCloud>20</tagsInCloud>
+        <sortInCloud>3</sortInCloud>
+        <expandComment>0</expandComment>
+        <expandTrackback>0</expandTrackback>
+        <lengthOfRecentNotice>35</lengthOfRecentNotice>
+        <lengthOfRecentEntry>35</lengthOfRecentEntry>
+        <lengthOfRecentComment>35</lengthOfRecentComment>
+        <lengthOfRecentTrackback>35</lengthOfRecentTrackback>
+        <lengthOfLink>30</lengthOfLink>
+        <showListOnCategory>1</showListOnCategory>
+        <showListOnArchive>1</showListOnArchive>
+        <commentMessage>
+            <none>댓글 없음</none>
+            <single>댓글 1개</single>
+        </commentMessage>
+        <trackbackMessage>
+            <none>0 trackback</none>
+            <single>1 trackback</single>
+        </trackbackMessage>
+        <contentWidth>640</contentWidth>
+    </default>
+</skin>

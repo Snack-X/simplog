@@ -1,0 +1,16 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "My server langind page",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Snack-X/landing-page.git"
+  },
+  "author": "Jaemin Noh <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.8.1"
+  }
+}

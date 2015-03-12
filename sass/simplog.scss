@@ -1,0 +1,79 @@
+@import "skyblue/variables";
+
+hr {
+  height: 3px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIgMSI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMCIgeT0iMCIgZmlsbD0iI2UyMmIzMCIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEiIHk9IjAiIGZpbGw9IiMyNzQzZDIiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSIyIiB5PSIwIiBmaWxsPSIjZDNkZGU5Ii8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMyIgeT0iMCIgZmlsbD0iI2YzOTkzOSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjQiIHk9IjAiIGZpbGw9IiMwMWE4NjAiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI1IiB5PSIwIiBmaWxsPSIjOTIzOGJlIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iNiIgeT0iMCIgZmlsbD0iI2ZkOTllMSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjciIHk9IjAiIGZpbGw9IiM1MTU1NTgiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI4IiB5PSIwIiBmaWxsPSIjZmZlNDNmIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iOSIgeT0iMCIgZmlsbD0iI2I0ZTA0YiIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEwIiB5PSIwIiBmaWxsPSIjYTYxMjZhIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMTEiIHk9IjAiIGZpbGw9IiMwMWFkYjkiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.blog-header .title a {
+  color: $white;
+}
+
+.blog-footer p.sosumi {
+  font-size: 0.8rem;
+}
+
+.article-header .title a {
+  color: $text-color;
+}
+
+.comment,
+.sub-comment {
+  list-style-type: none;
+  font-size: 0.9rem;
+
+  .controls {
+    margin-left: 16px;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    opacity: 0;
+    transition: 0.2s opacity;
+  }
+
+  &:hover .controls {
+    opacity: 1;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+}
+
+.sub-comment {
+  padding-left: 10px;
+  border-left: 1px solid $gray4;
+}
+
+.article-footer {
+  ul {
+    padding-left: 0;
+  }
+
+  form {
+    label {
+      font-size: 0.8rem;
+      line-height: 2rem;
+      text-align: right;
+    }
+
+    label em {
+      font-size: 0.6em;
+    }
+
+    input.form-control,
+    textarea.form-control {
+      height: 2rem;
+      padding: 0.4em;
+      margin-bottom: 10px;
+      font-size: 0.8em;
+    }
+
+    input[type='checkbox'] {
+      height: 1.7em;
+      width: 2em;
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>[##_title_##] <s_page_title> &ndash; [##_page_post_title_##]</s_page_title></title>
+<link rel="stylesheet" href="./css/skyblue.css">
+<link rel="stylesheet" href="./css/simplog.css">
+</head>
+
+<body id="[##_body_id_##]">
+
+<header class="blog-header bg-dark padding-top-30">
+  <div class="container text-center">
+    <h1 class="title"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+    <p class="description">[##_desc_##]</p>
+
+    <nav class="nav padding-y-15">
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]">Home</a>
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]">Post</a>
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]notice">About</a>
+      <a class="btn btn-dark btn-small" href="[##_guestbook_link_##]">Guest</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container padding-top-30">
+
+<s_article_rep>
+<article class="article [##_article_rep_category_body_id_##]">
+  <header class="article-header">
+    <h2 class="title"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+    <span class="date"><time>[##_article_rep_date_##]</time></span>
+    <span class="category">&ndash; <a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></span>
+  </header>
+  <hr>
+
+  <section class="article-content">[##_article_rep_desc_##]</section>
+  <hr>
+
+  <footer class="article-footer">
+    <p class="comments"><s_rp_count>댓글 [##_article_rep_rp_cnt_##]개</s_rp_count></p>
+    <s_rp>
+      <s_rp_container>
+        <ul>
+        <s_rp_rep>
+          <li class="comment">
+            <span class="name">[##_rp_rep_name_##]</span>
+            <span class="controls">
+              <time>[##_rp_rep_date_##]</time>
+              <span class="sep">&mdash;</span>
+              <a href="[##_rp_rep_link_##]">Link</a>
+              <span class="sep">&middot;</span>
+              <a href="#" onclick="[##_rp_rep_onclick_delete_##]">Modify</a>
+              <span class="sep">&middot;</span>
+              <a href="#" onclick="[##_rp_rep_onclick_reply_##]">Reply</a>
+            </span>
+            <p class="content">[##_rp_rep_desc_##]</p>
+          </li>
+          <s_rp2_container>
+          <s_rp2_rep>
+            <li class="sub-comment">
+              <span class="name">[##_rp_rep_name_##]</span>
+              <span class="controls">
+                <time>[##_rp_rep_date_##]</time>
+                <span class="sep">&mdash;</span>
+                <a href="[##_rp_rep_link_##]">Link</a>
+                <span class="sep">&middot;</span>
+                <a href="#" onclick="[##_rp_rep_onclick_delete_##]">Modify</a>
+              </span>
+              <p class="content">[##_rp_rep_desc_##]</p>
+            </li>
+          </s_rp2_rep>
+          </s_rp2_container>
+        </s_rp_rep>
+        </ul>
+      </s_rp_container>
+
+      <s_rp_input_form>
+      <hr>
+      <form action="#">
+      <s_rp_member>
+      <s_rp_guest>
+        <div class="row">
+          <div class="col xs-4 sm-3 md-2">
+            <label for="[##_rp_input_name_##]_[##_article_rep_id_##]">이름 <em>(필수)</em></label>
+          </div>
+          <div class="col xs-8 sm-9 md-10">
+            <input class="form-control" type="text" maxlength="20" required="required" placeholder="이름" id="[##_rp_input_name_##]_[##_article_rep_id_##]" name="[##_rp_input_name_##]" value="[##_guest_name_##]">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col xs-4 sm-3 md-2">
+            <label for="[##_rp_input_password_##]_[##_article_rep_id_##]">비밀번호 <em>(필수)</em></label>
+          </div>
+          <div class="col xs-8 sm-9 md-10">
+            <input class="form-control" type="password" required="required" placeholder="비밀번호" id="[##_rp_input_password_##]_[##_article_rep_id_##]" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col xs-4 sm-3 md-2">
+            <label for="[##_rp_input_homepage_##]_[##_article_rep_id_##]">홈페이지</label>
+          </div>
+          <div class="col xs-8 sm-9 md-10">
+            <input class="form-control" type="text" placeholder="홈페이지" id="[##_rp_input_homepage_##]_[##_article_rep_id_##]" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col xs-4 sm-3 md-2">
+            <label for="[##_rp_input_is_secret_##]_[##_article_rep_id_##]">비밀 댓글</label>
+          </div>
+          <div class="col xs-8 sm-9 md-10">
+            <input type="checkbox" id="[##_rp_input_is_secret_##]_[##_article_rep_id_##]" name="[##_rp_input_is_secret_##]">
+          </div>
+        </div>
+      </s_rp_guest>
+      </s_rp_member>
+
+        <textarea class="form-control" rows="3" required="required" placeholder="내용" name="[##_rp_input_comment_##]"></textarea>
+        <button class="btn btn-small" type="submit" value="Submit" onclick="[##_rp_onclick_submit_##]">Submit</button>
+      </form>
+      </s_rp_input_form>
+    </s_rp>
+  </footer>
+</article>
+</s_article_rep>
+
+</div>
+
+<footer class="blog-footer bg-light padding-top-20">
+  <div class="container text-center">
+    <p class="sosumi">Copyright &copy; <strong>[##_blogger_##]</strong>. All rights reserved.</p>
+    <p class="sosumi">Powered by <a href="http://www.textcube.org" onclick="window.open(this.href); return false">[##_textcube_name_##] [##_textcube_version_##]</a> &amp; Simplog v1.0.0</p>
+  </div>
+</header>
+
+</body>
+</html>
