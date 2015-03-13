@@ -1,5 +1,11 @@
 @import "skyblue/variables";
+@import "skyblue/mixins";
 
+/**
+ * Globally
+ */
+
+// 765-style <hr>
 hr {
   height: 3px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIgMSI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMCIgeT0iMCIgZmlsbD0iI2UyMmIzMCIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEiIHk9IjAiIGZpbGw9IiMyNzQzZDIiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSIyIiB5PSIwIiBmaWxsPSIjZDNkZGU5Ii8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMyIgeT0iMCIgZmlsbD0iI2YzOTkzOSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjQiIHk9IjAiIGZpbGw9IiMwMWE4NjAiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI1IiB5PSIwIiBmaWxsPSIjOTIzOGJlIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iNiIgeT0iMCIgZmlsbD0iI2ZkOTllMSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjciIHk9IjAiIGZpbGw9IiM1MTU1NTgiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI4IiB5PSIwIiBmaWxsPSIjZmZlNDNmIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iOSIgeT0iMCIgZmlsbD0iI2I0ZTA0YiIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEwIiB5PSIwIiBmaWxsPSIjYTYxMjZhIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMTEiIHk9IjAiIGZpbGw9IiMwMWFkYjkiLz48L3N2Zz4=");
@@ -15,40 +21,116 @@ hr {
   font-size: 0.8rem;
 }
 
+/**
+ * Cover
+ */
+
+.coverpost {
+  margin: 0 !important;
+  border: 0 !important;
+
+  h2 {
+    font-size: 2em !important;
+
+    a {
+      color: $text-color;
+      letter-spacing: 0 !important;
+      line-height: 1.2em !important;
+    }
+  }
+
+  .post_info {
+    @include clearfix;
+  }
+
+  .date, 
+  .category,
+  .category a {
+    font-size: $font-size !important;
+    font-family: $font-family !important;
+    line-height: $line-height !important;
+  }
+
+  .date {
+    float: left;
+    margin-right: 5px;
+    color: $text-color !important;
+  }
+
+  .category {
+    &:before {
+      content: "–"; // &ndash;
+      margin-right: 5px;
+    }
+
+    a {
+      color: $main-color + #222 !important;
+
+      &:active, &:focus, &:hover {
+        color: $main-color - $color-diff !important;
+      }
+    }
+  }
+
+  .author {
+    display: none;
+  }
+
+  .post_content {
+    margin: 16px 0 !important;
+    line-height: $line-height !important;
+    color: $text-color !important;
+  }
+}
+
+.cover + .cover .coverpost:before {
+  content: " ";
+  display: block;
+  height: 3px;
+  margin-bottom: 16px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIgMSI+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMCIgeT0iMCIgZmlsbD0iI2UyMmIzMCIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEiIHk9IjAiIGZpbGw9IiMyNzQzZDIiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSIyIiB5PSIwIiBmaWxsPSIjZDNkZGU5Ii8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMyIgeT0iMCIgZmlsbD0iI2YzOTkzOSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjQiIHk9IjAiIGZpbGw9IiMwMWE4NjAiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI1IiB5PSIwIiBmaWxsPSIjOTIzOGJlIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iNiIgeT0iMCIgZmlsbD0iI2ZkOTllMSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjciIHk9IjAiIGZpbGw9IiM1MTU1NTgiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI4IiB5PSIwIiBmaWxsPSIjZmZlNDNmIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iOSIgeT0iMCIgZmlsbD0iI2I0ZTA0YiIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjEwIiB5PSIwIiBmaWxsPSIjYTYxMjZhIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMTEiIHk9IjAiIGZpbGw9IiMwMWFkYjkiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/**
+ * Article
+ */
+
 .article-header .title a {
   color: $text-color;
-}
-
-.comment,
-.sub-comment {
-  list-style-type: none;
-  font-size: 0.9rem;
-
-  .controls {
-    margin-left: 16px;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    opacity: 0;
-    transition: 0.2s opacity;
-  }
-
-  &:hover .controls {
-    opacity: 1;
-  }
-
-  .name {
-    font-weight: bold;
-  }
-}
-
-.sub-comment {
-  padding-left: 10px;
-  border-left: 1px solid $gray4;
 }
 
 .article-footer {
   ul {
     padding-left: 0;
+  }
+
+  .comment,
+  .sub-comment {
+    list-style-type: none;
+    font-size: 0.9rem;
+
+    .controls {
+      margin-left: 16px;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+      opacity: 0;
+      transition: 0.2s opacity;
+    }
+
+    &:hover .controls {
+      opacity: 1;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+  }
+
+  .sub-comment {
+    padding-left: 10px;
+    border-left: 1px solid $gray4;
   }
 
   form {
