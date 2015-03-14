@@ -1,10 +1,10 @@
 // Grays
-$gray7:	#111;
-$gray6:	#333;
-$gray5:	#555;
-$gray4:	#777;
-$gray3:	#999;
-$gray2:	#ddd;
+$gray7:	#111111;
+$gray6:	#333333;
+$gray5:	#555555;
+$gray4:	#777777;
+$gray3:	#999999;
+$gray2:	#dddddd;
 $gray1:	#f7f7f7;
 
 // Maybe use these?
@@ -22,17 +22,17 @@ $gray1:	#f7f7f7;
 // violet #9b59b6 #8e44ad
 
 // Colors
-$body-background: #FbFbFb;
-$text-color:      #555;
+$body-background: #fbfbfb;
+$text-color:      #555555;
 
 $main-color:       #4378a7;
-$success-color:    #16A6B6;
-$error-color:      #E74C3C;
-$warning-color:    #F1C000;
+$success-color:    #16a6b6;
+$error-color:      #e74c3c;
+$warning-color:    #f1c000;
 $light-color:      #ecf0f1;
 $dark-color:       #252428;
-$main-light-color: #72A8D6;
-$main-grey-color:  #7F8184;
+$main-light-color: #72a8d6;
+$main-grey-color:  #7f8184;
 
 $navigation-color: #2c3e50;
 
@@ -78,5 +78,23 @@ $container-width-large-desktop: 1150px;
 $border-radius:     3px;
 $big-border-radius: 100px;
 
-//Custom colors
+// Custom colors
 $white: #fff;
+
+// From base16-solarized
+$code-base00: #002b36;
+$code-base01: #073642;
+$code-base02: #586e75;
+$code-base03: #657b83;
+$code-base04: #839496;
+$code-base05: #93a1a1;
+$code-base06: #eee8d5;
+$code-base07: #fdf6e3;
+$code-base08: #dc322f;
+$code-base09: #cb4b16;
+$code-base0A: #b58900;
+$code-base0B: #859900;
+$code-base0C: #2aa198;
+$code-base0D: #268bd2;
+$code-base0E: #6c71c4;
+$code-base0F: #d33682;

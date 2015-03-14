@@ -1,5 +1,6 @@
 @import "skyblue/variables";
 @import "skyblue/mixins";
+@import "skyblue/tables";
 
 /**
  * Globally
@@ -99,6 +100,26 @@ hr {
 
 .article-header .title a {
   color: $text-color;
+}
+
+.article-content {
+  table {
+    @extend .table;
+  }
+
+  code {
+    background-color: $code-base00;
+    color: $code-base04;
+  }
+
+  pre {
+    background: none;
+    padding: 0;
+
+    code {
+      padding: 0.8em 1em;
+    }
+  }
 }
 
 .article-footer {
