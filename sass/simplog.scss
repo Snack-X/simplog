@@ -154,6 +154,10 @@ hr {
     }
   }
 
+  span {
+    line-height: $line-height !important;
+  }
+
   .moreless_fold,
   .moreless_top,
   .moreless_bottom {
