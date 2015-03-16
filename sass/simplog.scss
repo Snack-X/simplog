@@ -1,6 +1,7 @@
 @import "skyblue/variables";
 @import "skyblue/mixins";
 @import "skyblue/tables";
+@import "skyblue/buttons_mixin";
 
 /**
  * Globally
@@ -103,8 +104,40 @@ hr {
 }
 
 .article-content {
+  // from skyblue/_table.scss
   table {
-    @extend .table;
+    width: 100%;
+    margin-bottom: $font-size;
+
+    th,
+    td {
+      padding: 8px;
+      line-height: $line-height;
+      vertical-align: top;
+      border-top: 1px solid $table-border-color;
+    }
+
+    thead th {
+      vertical-align: bottom;
+      font-weight: $bold;
+    }
+
+    caption + thead tr:first-child th,
+    caption + thead tr:first-child td,
+    colgroup + thead tr:first-child th,
+    colgroup + thead tr:first-child td,
+    thead:first-child tr:first-child th,
+    thead:first-child tr:first-child td {
+      border-top: 0;
+    }
+
+    tbody + tbody {
+      border-top: 2px solid $table-border-color;
+    }
+
+    .table {
+      background-color: $body-background;
+    }
   }
 
   code {
@@ -119,6 +152,39 @@ hr {
     code {
       padding: 0.8em 1em;
     }
+  }
+
+  .moreless_fold,
+  .moreless_top,
+  .moreless_bottom {
+    display: inline-block;
+    min-width: 30px;
+    padding: 5px 15px;
+    background: transparent;
+    border: 2px solid $main-color;
+    border-radius: 0 $big-border-radius $big-border-radius 0;
+    font-size: 0.8em;
+    line-height: 1.2em;
+
+    @include generate-empty-btn($main-color, $main-color);
+  }
+
+  .moreless_fold {
+    border-radius: $big-border-radius;
+  }
+
+  .moreless_top {
+    margin-bottom: 0;
+  }
+
+  .moreless_top,
+  .moreless_bottom {
+    border-radius: 0 $big-border-radius $big-border-radius 0;
+  }
+
+  .moreless_content {
+    padding: 10px 0 10px 10px;
+    border-left: 2px solid $main-color;
   }
 }
 
