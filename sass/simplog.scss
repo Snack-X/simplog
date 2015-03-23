@@ -207,15 +207,10 @@ hr {
     font-size: 0.9rem;
 
     .controls {
+      float: right;
       margin-left: 16px;
       font-size: 0.8rem;
       line-height: 1.5rem;
-      opacity: 0;
-      transition: 0.2s opacity;
-    }
-
-    &:hover .controls {
-      opacity: 1;
     }
 
     .name {
