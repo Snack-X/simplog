@@ -28,6 +28,38 @@ hr {
   font-size: 0.8rem;
 }
 
+@mixin blog-form {
+  form {
+    label {
+      font-size: 0.8rem;
+      line-height: 2rem;
+      text-align: right;
+    }
+
+    label em {
+      font-size: 0.6em;
+    }
+
+    input.form-control,
+    textarea.form-control {
+      height: 2rem;
+      padding: 0.4em;
+      margin-bottom: 10px;
+      font-size: 0.8em;
+    }
+
+    input[type='checkbox'] {
+      height: 1.7em;
+      width: 2em;
+      padding-left: 0;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
 /**
  * Cover
  */
@@ -97,6 +129,16 @@ hr {
   margin-bottom: 16px;
 
   @include hr-765;
+}
+
+/**
+ * Protected Article
+ */
+
+.article-protected {
+  .article-content {
+    @include blog-form;
+  }
 }
 
 /**
@@ -223,31 +265,7 @@ hr {
     border-left: 1px solid $gray4;
   }
 
-  form {
-    label {
-      font-size: 0.8rem;
-      line-height: 2rem;
-      text-align: right;
-    }
-
-    label em {
-      font-size: 0.6em;
-    }
-
-    input.form-control,
-    textarea.form-control {
-      height: 2rem;
-      padding: 0.4em;
-      margin-bottom: 10px;
-      font-size: 0.8em;
-    }
-
-    input[type='checkbox'] {
-      height: 1.7em;
-      width: 2em;
-      padding-left: 0;
-    }
-  }
+  @include blog-form;
 }
 
 /**
@@ -255,7 +273,7 @@ hr {
  */
 
 .hfeed {
-  .hentry + a {
+  & > div + a {
     display: block;
     margin: $line-height * 2 0;
     height: 2px;
