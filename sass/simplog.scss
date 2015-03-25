@@ -273,7 +273,8 @@ hr {
  */
 
 .hfeed {
-  & > div + a {
+  & > div + a,
+  & > .article-notice + .notice-top {
     display: block;
     margin: $line-height * 2 0;
     height: 2px;
