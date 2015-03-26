@@ -1,5 +1,26 @@
 module.exports = function(grunt) {
+  var simplogVersion = "1.0";
+
   grunt.initConfig({
+    htmlbuild: {
+      all: {
+        src: "src/skin.html",
+        dest: "dist/",
+        options: {
+          sections: {
+            views: {
+              cover:             "src/views/cover.html",
+              notice:            "src/views/notice.html",
+              article_protected: "src/views/article_protected.html",
+              article:           "src/views/article.html"
+            }
+          },
+          data: {
+            version: simplogVersion
+          }
+        }
+      }
+    },
     sass: {
       all: {
         options: {
@@ -8,16 +29,72 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: "sass/",
+          cwd: "src/sass/",
           src: ["*.scss"],
-          dest: "css/",
+          dest: "dist/css/",
           ext: ".css"
+        }]
+      }
+    },
+    jshint: {
+      all: [
+        "Gruntfile.js",
+        "src/simplog.js"
+      ]
+    },
+    uglify: {
+      all: {
+        files: [{
+          expand: true,
+          cwd: "src/js/",
+          src: ["**/*.js"],
+          dest: "dist/js/"
+        }]
+      }
+    },
+    replace: {
+      all: {
+        options: {
+          patterns: [
+            { match: "version", replacement: simplogVersion }
+          ]
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: [
+            "src/index.xml"
+          ],
+          dest: "dist/"
+        }]
+      }
+    },
+    compress: {
+      main: {
+        options: {
+          archive: "simplog-" + simplogVersion + ".zip"
+        },
+        files: [{
+          src: ["dist/**"],
+          dest: "simplog/"
         }]
       }
     }
   });
 
+  grunt.loadNpmTasks("grunt-html-build");
   grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-replace");
 
-  grunt.registerTask("default", ["sass"]);
+  grunt.loadNpmTasks("grunt-contrib-compress");
+
+  grunt.registerTask("default", [
+    "htmlbuild",
+    "sass",
+    "jshint",
+    "uglify",
+    "replace"
+  ]);
 };

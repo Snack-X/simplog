@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta http-equiv="Keywords" content="[##_meta_http_equiv_keywords_##]" />
+<meta name="description" content="[##_desc_##]">
+<meta name="author" content="[##_blogger_##]">
+<title>[##_title_##] <s_page_title> &ndash; [##_page_post_title_##]</s_page_title></title>
+<link rel="stylesheet" href="./css/skyblue.css">
+<link rel="stylesheet" href="./css/simplog.css">
+<link rel="stylesheet" href="./css/highlight.css">
+
+<link rel="shortcut icon" href="[##_blog_link_##]favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
+<link rel="alternate" type="application/rss+xml" title="[##_title_##] : responses" href="[##_response_rss_url_##]">
+<link rel="alternate" type="application/atom+xml" title="[##_title_##]" href="[##_atom_url_##]">
+<link rel="alternate" type="application/atom+xml" title="[##_title_##] : responses" href="[##_response_atom_url_##]">
+
+<script src="./js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="./js/simplog.js"></script>
+
+</head>
+
+<body id="[##_body_id_##]">
+
+<header class="blog-header bg-dark padding-top-30">
+  <div class="container text-center">
+    <h1 class="title"><a href="[##_blog_link_##]">[##_title_##]</a></h1>
+    <p class="description">[##_desc_##]</p>
+
+    <nav class="nav padding-y-15">
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]">Home</a>
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]">Post</a>
+      <a class="btn btn-dark btn-small" href="[##_blog_link_##]notice">About</a>
+      <a class="btn btn-dark btn-small nav-search" href="#">Search</a>
+    </nav>
+
+    <div class="header-search">
+      <s_search>
+        <input class="form-control" type="text" name="[##_search_name_##]" value="[##_search_text_##]">
+        <button class="btn" type="button" value="Submit" onclick="[##_search_onclick_submit_##]">Search</button>
+      </s_search>
+    </div>
+  </div>
+</header>
+
+<div class="container padding-y-30">
+
+<s_cover>
+<!-- build:section views.cover -->
+<!-- /build -->
+</s_cover>
+
+<s_notice_rep>
+<!-- build:section views.notice -->
+<!-- /build -->
+</s_notice_rep>
+
+<s_article_protected>
+<!-- build:section views.article_protected -->
+<!-- /build -->
+</s_article_protected>
+
+<s_article_rep>
+<!-- build:section views.article -->
+<!-- /build -->
+</s_article_rep>
+
+</div>
+
+<footer class="blog-footer bg-light padding-top-20">
+  <div class="container text-center">
+    <p class="sosumi">Copyright &copy; <strong>[##_blogger_##]</strong>. All rights reserved.</p>
+    <p class="sosumi">Powered by <a href="http://www.textcube.org" onclick="window.open(this.href); return false">[##_textcube_name_##] [##_textcube_version_##]</a> &amp; Simplog v<%= version %></p>
+  </div>
+</header>
+
+</body>
+</html>

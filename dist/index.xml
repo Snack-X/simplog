@@ -2,7 +2,7 @@
 <skin version="2.0">
     <information>
         <name>Simplog</name>
-        <version>1.0.0</version>
+        <version>1.0</version>
         <description>
             <![CDATA[Simple Blog for Textcube]]>
         </description>
@@ -14,7 +14,7 @@
         <name>Snack</name>
         <homepage>http://korsnack.kr</homepage>
         <email>korsnack@korsnack.kr</email>
-    </author> 
+    </author>
     <support mobile="yes" desktop="yes" tablet="yes" />
     <default>
         <recentEntries>5</recentEntries>
@@ -40,6 +40,6 @@
             <none>0 trackback</none>
             <single>1 trackback</single>
         </trackbackMessage>
-        <contentWidth>640</contentWidth>
+        <contentWidth>940</contentWidth>
     </default>
 </skin>

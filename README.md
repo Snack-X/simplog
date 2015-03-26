@@ -2,4 +2,9 @@
 
 Simple blog for Textcube.
 
-Work in progress.
+## Setup
+
+1. `npm install`
+2. `grunt`
+
+To release, modify `simplogVersion` at `Gruntfile.js`, and run `grunt compress`.
