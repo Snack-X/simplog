@@ -273,6 +273,10 @@ hr {
     padding-left: 0;
   }
 
+  .comments a {
+    color: $text-color;
+  }
+
   .comment,
   .sub-comment {
     list-style-type: none;
