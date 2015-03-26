@@ -1,7 +1,7 @@
 $inputs: 'input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], select, textarea';
 
 #{$inputs} {
-  &.form-control {
+  &.form-control{
     height: 2.625em;
     width: 100%;
     max-width: 100%;
@@ -26,13 +26,13 @@ $inputs: 'input[type="text"], input[type="password"], input[type="date"], input[
     }
 
 
-    &.error, .error & {
+    &.error, .error &{
       border-color: $error-color;
     }
-    &.warning, .warning & {
+    &.warning, .warning &{
       border-color: $warning-color;
     }
-    &.success, .success & {
+    &.success, .success &{
       border-color: $success-color;
     }
   }
@@ -44,52 +44,59 @@ textarea {
   line-height: $line-height;
 }
 
-select{
+select {
   -webkit-appearance: none;
+}
+
+textarea {
+  height: auto;
+  min-height: 100px;
+  line-height: $line-height;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 // Hack for webkit only
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select {
-    background-color: #fff;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAKCAYAAACqnE5VAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYeBwwgz2YJHAAAASVJREFUOMud0jFqwzAUBuD/6QLqDXqE+Abx4MGDIR5CCBpEsUFzjtTRhAwqeMiQQUdIj9AbJPt7Vhe1OKShdv5FvCf0PngIAOCcWznnNCbGOaedcyvMiGrbdikiXkRC0zT/Yk3TaBEJIuLbtl1OhpjZMzOYORORYK19iFlrtYgEZs7SGz8ZEpFdeoQ0IBhj7jBjjGbmMQIR2U2FCAC22+0qxvgO4CX1zzHGfL/fXwFgs9loIgoAsnR/IaK3rus+ZkEAsF6vFzHGMMIuwzDkAKCUuukTUX44HD7nfAYaF3VdL4ZhuBmazt9aKZV772chdxAAVFX1GmP0ozX95ExEdd/3X3gi9FezLEud1piNkPx4PF7xZOjRRVEUOq0RSqn8dDo9jQDAN6OnnUe+41wgAAAAAElFTkSuQmCC);
-    background-repeat: no-repeat;
-    background-position: right center;
+  select, select.form-control{
+    @include select();
+  }
+}
+
+// Hack for firefox
+@-moz-document url-prefix() {
+  select, select.form-control{
+    @include select();
   }
 }
 
 label {
   display: block;
   margin-bottom: 0.5em;
-  height: 1.5;
   line-height: 1.5em;
 
-  &.error, .error & {
+  &.error, .error &{
     color: $error-color;
   }
-  &.warning, .warning & {
+  &.warning, .warning &{
     color: $warning-color;
   }
-  &.success, .success & {
+  &.success, .success &{
     color: $success-color;
   }
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  font-size: 1em;
-  height: 1em;
-  width: 1em;
 }
 
 @include placeholder($gray3);
 
 .form {
-  .checkbox-group, .radio-group{
+  .checkbox-group, .radio-group {
     margin-bottom: $font-size;
   }
   &.form-horizontal {
-    label{
+    label {
       display: inline-block;
       width: 200px;
       max-width: 100%;
@@ -101,9 +108,86 @@ input[type="radio"] {
       display: inline-block;
       width: 200px;
       max-width: 100%;
-      label{
+      label {
         display: block;
       }
     }
+  }
+}
+
+.fancy-checkbox {
+  padding-left: $checkbox-width + 6px;
+
+  span:before{
+    width: $checkbox-width;
+    height: $checkbox-height;
+    border-radius: $checkbox-height / 2;
+    top: $checkbox-top;
+    left: 0;
+    background: $checkbox-bg;
+    border: 1px solid $checkbox-bg;
+  }
+  span:after {
+    width: $checkbox-circle-size;
+    height: $checkbox-circle-size;
+    border-radius: $checkbox-circle-size / 2;
+    background: #fff;
+    top: $checkbox-top + 1;
+    left: 1px;
+  }
+
+  input:checked + span {
+    &:after{
+      left: $checkbox-width - $checkbox-circle-size - 1;
+    }
+    &:before{
+      background: $checkbox-checked-bg;
+      border: 1px solid $checkbox-checked-bg;
+    }
+  }
+
+  input:focus + span:before {
+    border: 1px solid darken($checkbox-bg, 20);
+  }
+  input:focus:checked + span:before {
+    border: 1px solid darken($checkbox-checked-bg, 20);
+  }
+}
+
+.fancy-radio {
+  padding-left: $radio-size + 8px;
+
+  span:before {
+    width: $radio-size;
+    height: $radio-size;
+    border-radius: 50%;
+    top: $radio-top;
+    left: 0;
+    background: #fff;
+    border: 1px solid $radio-border-color;
+  }
+  span:after {
+    border-radius: 50%;
+    background: #fff;
+    top: $radio-circle-top;
+    left: $radio-circle-left;
+    width: 0;
+    height: 0;
+  }
+
+  input:checked + span {
+    &:after {
+      width: $radio-circle-size;
+      height: $radio-circle-size;
+      top: $radio-circle-active-top;
+      left: $radio-circle-active-left;
+    }
+    &:before {
+      background: $radio-checked-bg;
+    }
+  }
+
+  input:focus + span:before {
+    border: 1px solid darken($radio-checked-bg, 20);
   }
 }

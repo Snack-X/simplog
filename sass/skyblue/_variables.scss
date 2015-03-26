@@ -1,85 +1,101 @@
 // Grays
-$gray7:	#111111;
-$gray6:	#333333;
-$gray5:	#555555;
-$gray4:	#777777;
-$gray3:	#999999;
-$gray2:	#dddddd;
-$gray1:	#f7f7f7;
+$gray7:	#111111 !default;
+$gray6:	#333333 !default;
+$gray5:	#555555 !default;
+$gray4:	#777777 !default;
+$gray3:	#999999 !default;
+$gray2:	#dddddd !default;
+$gray1:	#f7f7f7 !default;
 
-// Maybe use these?
-// grays
-// #ecf0f1
-// #bdc3c7
-// #95a5a6
-// #7f8c8d
-
-// Dark navy/gray
-// #34495e
-// #2c3e50
-
-// green #2ecc71 #27ae60
-// violet #9b59b6 #8e44ad
 
 // Colors
-$body-background: #fbfbfb;
-$text-color:      #555555;
+$body-background:  #fbfbfb !default;
+$text-color:       #555555 !default;
 
-$main-color:       #4378a7;
-$success-color:    #16a6b6;
-$error-color:      #e74c3c;
-$warning-color:    #f1c000;
-$light-color:      #ecf0f1;
-$dark-color:       #252428;
-$main-light-color: #72a8d6;
-$main-grey-color:  #7f8184;
+$main-color:       #4378a7 !default;
+$success-color:    #16a6b6 !default;
+$error-color:      #e74c3c !default;
+$warning-color:    #f1c000 !default;
+$light-color:      #ecf0f1 !default;
+$dark-color:       #252428 !default;
+$main-light-color: #72a8d6 !default;
+$main-grey-color:  #7f8184 !default;
 
-$navigation-color: #2c3e50;
+$navigation-color: #2c3e50 !default;
 
-$color-diff:       #151515;
+$color-diff:       #151515 !default;
+
 
 // Defaults
-$font-family:     "Open Sans", "Helvetica Neue", Helvetica, NanumBarunGothic, Nanum Gothic, "Apple SD Gothic Neo", Dotum, Arial, sans-serif;
-$font-size:       16px;
-$font-weight:     normal;
-$line-height:     1.5em;
-$bold:            700;
+$font-family:     "Open Sans", "Helvetica Neue", Helvetica,
+                  NanumBarunGothic, Nanum Gothic, "Apple SD Gothic Neo",
+                  Dotum, Arial, sans-serif !default;
+$font-size:       16px !default;
+$font-weight:     normal !default;
+$line-height:     1.5em !default;
+$bold:            700 !default;
 
-$transition-time: 0.25s;
+$transition-time: 0.25s !default;
+
 
 // Code
-$pre-font-family: NanumGothicCoding, "Deja-vu Sans Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
-$pre-font-size:   15px;
+$pre-font-family: NanumGothicCoding, "Deja-vu Sans Mono", Monaco, Menlo,
+                  Consolas, "Courier New", monospace !default;
+$pre-font-size:   15px !default;
 
 
 // Tables
-$table-border-color:     $gray2;
-$table-background:       $gray1;
-$table-background-hover: lighten($main-color, 10);
-$table-color-hover:      #fff;
+$table-border-color:     $gray2 !default;
+$table-background:       $gray1 !default;
+$table-background-hover: lighten($main-color, 10) !default;
+$table-color-hover:      #fff !default;
+
+
+// Forms
+// Fancy checkboxes
+$checkbox-height:      22px !default;
+$checkbox-width:       38px !default;
+$checkbox-circle-size: $checkbox-height - 2 !default;
+$checkbox-top:         ($font-size * 1.5 - $checkbox-height) / 2 !default;
+$checkbox-bg:          #c3c5c4 !default;
+$checkbox-checked-bg:  $success-color !default;
+
+// Fancy radio buttons
+$radio-size:               20px !default;
+$radio-circle-size:        10px !default;
+$radio-top:                ($font-size * 1.5 - $radio-size) / 2 !default;
+$radio-border-color:       #c3c5c4 !default;
+$radio-checked-bg:         $success-color !default;
+$radio-circle-left:        $radio-size / 2 !default;
+$radio-circle-top:         $radio-circle-left + $radio-top !default;
+$radio-circle-active-left: ($radio-size - $radio-circle-size) / 2 !default;
+$radio-circle-active-top:  $radio-circle-active-left + $radio-top !default;
 
 // Grid
-$grid-columns:       12;
-$grid-padding-width: 16px;
-$grid-unit-width:    100% / $grid-columns;
+$grid-columns:       12 !default;
+$grid-padding-width: 16px !default;
+$grid-unit-width:    100% / $grid-columns !default;
 
 
-$tablet-portrait-breakpoint:    480px;
-$tablet-breakpoint:             768px;
-$desktop-breakpoint:            970px;
-$large-desktop-breakpoint:      1200px;
+// Breakpoints
+$tablet-portrait-breakpoint:    480px !default;
+$tablet-breakpoint:             768px !default;
+$desktop-breakpoint:            970px !default;
+$large-desktop-breakpoint:      1200px !default;
 
-$container-width-tablet:        720px;
-$container-width-desktop:       940px;
-$container-width-large-desktop: 1150px;
+$container-width-tablet:        720px !default;
+$container-width-desktop:       940px !default;
+$container-width-large-desktop: 1150px !default;
 
 
 // Helpers
-$border-radius:     3px;
-$big-border-radius: 100px;
+$border-radius:     3px !default;
+$big-border-radius: 100px !default;
+
 
 // Custom colors
-$white: #fff;
+$white: #ffffff !default;
+
 
 // From base16-solarized
 $code-base00: #002b36;
