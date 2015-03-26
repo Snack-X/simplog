@@ -75,7 +75,9 @@ module.exports = function(grunt) {
           archive: "simplog-" + simplogVersion + ".zip"
         },
         files: [{
-          src: ["dist/**"],
+          expand: true,
+          cwd: "dist/",
+          src: ["**"],
           dest: "simplog/"
         }]
       }
