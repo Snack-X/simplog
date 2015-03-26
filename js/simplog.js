@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
   // remove 'height' attribute from article's images for responsive things
   var images = document.querySelectorAll(".article-content img");
 
@@ -42,4 +42,4 @@ window.onload = function() {
      	foldContent.style.display = "none";
     }
   }
-}
+});
