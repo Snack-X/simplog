@@ -42,4 +42,16 @@ window.addEventListener("load", function() {
      	foldContent.style.display = "none";
     }
   }
+
+  document.querySelector(".nav-search").addEventListener("click", function() {
+    var headerSearch = document.querySelector(".header-search");
+    var computedStyle = window.getComputedStyle(headerSearch);
+
+    if(headerSearch.style.display === "none" || computedStyle.display === "none") {
+      headerSearch.style.display = "block";
+    }
+    else {
+      headerSearch.style.display = "none";
+    }
+  });
 });

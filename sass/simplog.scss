@@ -20,8 +20,14 @@ hr {
   @include hr-765;
 }
 
-.blog-header .title a {
-  color: $white;
+.blog-header {
+  .title a {
+    color: $white;
+  }
+
+  .nav .btn {
+    margin-bottom: 0;
+  }
 }
 
 .blog-footer p.sosumi {
@@ -57,6 +63,32 @@ hr {
     .btn {
       width: 100%;
     }
+  }
+}
+
+.header-search {
+  @include clearfix;
+
+  display: none;
+  margin: auto;
+  width: 320px;
+
+  input[type="text"] {
+    padding: 0.3em;
+    height: 1.8em;
+    width: 220px;
+    float: left;
+    border-radius: 3px 0 0 3px;
+    border-width: 2px 0 2px 2px !important;
+  }
+
+  .btn {
+    padding: 0;
+    height: 1.8em;
+    min-width: 0;
+    width: 100px;
+    float: left;
+    border-radius: 0 3px 3px 0;
   }
 }
 
