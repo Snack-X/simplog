@@ -115,10 +115,30 @@ label {
   }
 }
 
+.fancy-radio,
+.fancy-checkbox {
+  position: relative;
+  cursor: pointer;
+
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  span:before,
+  span:after {
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all 0.25s;
+  }
+}
+
 .fancy-checkbox {
   padding-left: $checkbox-width + 6px;
 
-  span:before{
+  span:before {
     width: $checkbox-width;
     height: $checkbox-height;
     border-radius: $checkbox-height / 2;
@@ -137,10 +157,10 @@ label {
   }
 
   input:checked + span {
-    &:after{
+    &:after {
       left: $checkbox-width - $checkbox-circle-size - 1;
     }
-    &:before{
+    &:before {
       background: $checkbox-checked-bg;
       border: 1px solid $checkbox-checked-bg;
     }

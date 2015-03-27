@@ -50,9 +50,7 @@
 
 <s_cover>
 <s_cover_rep>
-<article class="cover">
-  [##_cover_content_##]
-</article>
+[##_cover_content_##]
 </s_cover_rep>
 
 </s_cover>
@@ -188,7 +186,10 @@
             <label for="[##_rp_input_is_secret_##]_[##_article_rep_id_##]">비밀 댓글</label>
           </div>
           <div class="col xs-8 sm-9 md-10">
-            <input type="checkbox" id="[##_rp_input_is_secret_##]_[##_article_rep_id_##]" name="[##_rp_input_is_secret_##]">
+            <div class="fancy-checkbox">
+              <input type="checkbox" id="[##_rp_input_is_secret_##]_[##_article_rep_id_##]" name="[##_rp_input_is_secret_##]">
+              <span></span>
+            </div>
           </div>
         </div>
       </s_rp_guest>
@@ -206,12 +207,14 @@
 
 </div>
 
+
 <footer class="blog-footer bg-light padding-top-20">
   <div class="container text-center">
     <p class="sosumi">Copyright &copy; <strong>[##_blogger_##]</strong>. All rights reserved.</p>
-    <p class="sosumi">Powered by <a href="http://www.textcube.org" onclick="window.open(this.href); return false">[##_textcube_name_##] [##_textcube_version_##]</a> &amp; Simplog v<%= version %></p>
+    <p class="sosumi">Powered by <a href="http://www.textcube.org" target="_blank">[##_textcube_name_##] [##_textcube_version_##]</a> &amp; Simplog v1.1</p>
   </div>
-</header>
+</footer>
+
 
 </body>
 </html>

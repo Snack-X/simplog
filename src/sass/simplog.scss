@@ -60,6 +60,10 @@ hr {
       padding-left: 0;
     }
 
+    .fancy-checkbox {
+      margin-top: 4px;
+    }
+
     .btn {
       width: 100%;
     }
@@ -114,7 +118,7 @@ hr {
     @include clearfix;
   }
 
-  .date, 
+  .date,
   .category,
   .category a {
     font-size: $font-size !important;
