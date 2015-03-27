@@ -319,3 +319,30 @@ hr {
     @include hr-765;
   }
 }
+
+/**
+ * Pagination
+ */
+
+.pagination {
+  text-align: center;
+
+  .page-prev,
+  .page-next {
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+
+  .page-num {
+    margin: 0 3px;
+  }
+
+  a.page-num .selected {
+    color: $gray5;
+  }
+
+  a.no-more-prev,
+  a.no-more-next {
+    color: $gray4;
+  }
+}
