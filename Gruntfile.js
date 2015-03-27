@@ -13,7 +13,8 @@ module.exports = function(grunt) {
               notice:            "src/views/notice.html",
               article_protected: "src/views/article_protected.html",
               article:           "src/views/article.html",
-              pagination:        "src/views/pagination.html"
+              pagination:        "src/views/pagination.html",
+              search:            "src/views/search.html"
             }
           },
           data: {
