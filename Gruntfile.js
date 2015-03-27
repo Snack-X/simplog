@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  var simplogVersion = "1.0";
+  var simplogVersion = "1.1";
 
   grunt.initConfig({
     htmlbuild: {
