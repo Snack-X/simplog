@@ -132,7 +132,7 @@ hr {
     margin-left: 20px;
     float: right;
     font-size: 0.9em;
-    line-height: $line-height;
+    line-height: 24px;
   }
 
   &:last-child {
@@ -144,7 +144,9 @@ hr {
   display: block;
 }
 
-#tt-body-search .search-keyword {
+#tt-body-search .search-keyword,
+#tt-body-search .search-comment,
+#tt-body-search .search-comment .search-header {
   display: block;
 }
 

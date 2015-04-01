@@ -14,7 +14,8 @@ module.exports = function(grunt) {
               article_protected: "src/views/article_protected.html",
               article:           "src/views/article.html",
               pagination:        "src/views/pagination.html",
-              search:            "src/views/search.html"
+              list:              "src/views/list.html",
+              rplist:            "src/views/rplist.html",
             }
           },
           data: {
