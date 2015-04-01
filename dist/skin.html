@@ -20,6 +20,10 @@
 <script src="./js/highlight.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="./js/simplog.js"></script>
+<!--[if lt IE 9]>
+  <script src="./js/ie/html5shiv.js"></script>
+  <script src="./js/ie/respond.src.js"></script>
+<![endif]-->
 
 </head>
 
@@ -47,6 +51,34 @@
 </header>
 
 <div class="container padding-y-30">
+
+<s_list>
+<section class="search">
+	<h3 class="search-header search-category">
+		<strong>[##_list_conform_##]</strong> 카테고리의 글 [##_list_count_##]개
+	</h3>
+
+	<h3 class="search-header search-keyword">
+		<strong>[##_list_conform_##]</strong> 키워드의 글 [##_list_count_##]개
+	</h3>
+
+	<hr>
+
+	<ul class="search-list">
+		<s_list_rep>
+			<li class="search-item">
+				<span class="title">
+					<a href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
+				</span>
+				<span class="date">
+					<time>[##_list_rep_regdate_##]</time>
+				</span>
+			</li>
+		</s_list_rep>
+	</ul>
+</section>
+
+</s_list>
 
 <s_cover>
 <s_cover_rep>
@@ -221,10 +253,6 @@
 </section>
 
 </s_paging>
-
-<s_list>
-
-</s_list>
 
 </div>
 
