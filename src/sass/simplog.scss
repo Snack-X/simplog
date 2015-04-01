@@ -117,13 +117,22 @@ hr {
 }
 
 .search-item {
+  display: table;
+  width: 100%;
   padding: 3px 0;
   list-style: none;
   border-bottom: 1px solid $gray3;
 
+  .title, .date {
+    display: table-cell;
+    vertical-align: top;
+  }
+
   .date {
+    margin-left: 20px;
     float: right;
     font-size: 0.9em;
+    line-height: $line-height;
   }
 
   &:last-child {
@@ -151,8 +160,13 @@ hr {
   margin: 0 !important;
   border: 0 !important;
 
+  .img_preview {
+    margin: 4px 10px 6px 0 !important;
+  }
+
   h2 {
-    font-size: 2em !important;
+    font-size: 24px !important;
+    line-height: 30px;
 
     a {
       color: $text-color;
